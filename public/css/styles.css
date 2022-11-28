@@ -1,0 +1,55 @@
+.title {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 1rem auto;
+    padding: 1rem;
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+label {
+    margin: 1rem 0;
+}
+
+input {
+    height: 1.5rem;
+}
+
+.btn {
+    margin: 1rem auto;
+    width: 30%;
+    height: 2rem;
+    text-transform: uppercase;
+}
+
+.btnProducts {
+    display: block;
+    margin: 1rem auto;
+    height: 2rem;
+    text-transform: uppercase;
+    width: 20%;
+}
+
+.list {
+    width: 60%;
+    border: 5px solid black;
+    border-radius: 10px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    list-style: none;
+}
+
+.items {
+    width: 100%;
+    text-align: center;
+    margin: 1rem auto;
+    border-bottom: 1px solid black;
+}

@@ -1,6 +1,7 @@
-<ul>
+<h1 class="title">Productos</h1>
+<ul class="list">
     {{#each products}}
-    <li>{{this.product}}, {{this.price}}, <img src={{this.url}} alt="imagen"></li>
+    <li class="items">{{this.product}}, {{this.price}},<img src={{this.url}} alt="imagen"></li>
     {{/each}}
 </ul>
-<a href="/"><button>Volver</button></a>
+<a href="/"><button class="btnProducts">Volver</button></a>

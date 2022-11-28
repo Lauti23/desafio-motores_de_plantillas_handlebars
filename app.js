@@ -11,6 +11,7 @@ app.set('views', './views')
 app.set('view engine', 'handlebars')
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
+app.use(express.static('public'))
 
 let products = []
 
@@ -22,10 +23,20 @@ app.get('/', (req, res) => {
     }
 })
 
-app.post('/products', (req, res) => {
+app.get('/products', (req, res) => {
+    try {
+        res.render('products', {
+            products: products
+        })
+    } catch (error) {
+        res.send({status: 'Error', message: error.message})
+    }
+})
+
+app.post('/', (req, res) => {
     try {
         let product = req.body
-        if (!product || !product.price || !product.url) {
+        if (!product.product || !product.price || !product.url) {
             res.send({status: 'Error', message: 'Faltan campos por completar'})
         } else {
             console.log('REQ.BODY', req.body)
